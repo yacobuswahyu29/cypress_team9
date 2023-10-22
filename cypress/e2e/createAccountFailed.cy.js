@@ -1,5 +1,5 @@
-describe('E2E create account', () => {
-    it('create account', () => {
+describe('E2E create account failed', () => {
+    it('create account failed', () => {
       cy.visit('https://magento.softwaretestingboard.com/');
       cy.get('.panel > .header > :nth-child(3) > a').click();
       cy.get('#firstname').click().type('test');

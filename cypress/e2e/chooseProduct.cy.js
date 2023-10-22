@@ -1,5 +1,5 @@
-describe('E2E Login account', () => {
-    it('Login account', () => {
+describe('E2E choose Product', () => {
+    it('choose Product', () => {
       cy.visit('https://magento.softwaretestingboard.com/');
       cy.get('.panel > .header > .authorization-link > a').click();
       cy.get('#email').click().type('yacobus.ranger@gmail.com');

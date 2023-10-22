@@ -1,5 +1,5 @@
-describe('E2E view & update - ShopingChart', () => {
-    it('view & update - ShopingChart', () => {
+describe('E2E process to checkout', () => {
+    it('process to checkout', () => {
       cy.visit('https://magento.softwaretestingboard.com/');
       cy.get('.panel > .header > .authorization-link > a').click();
       cy.get('#email').click().type('yacobus.ranger@gmail.com');
