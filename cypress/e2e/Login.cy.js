@@ -6,4 +6,11 @@ describe('E2E Login account', () => {
       cy.get('.login-container > .block-customer-login > .block-content > #login-form > .fieldset > .password > .control > #pass').click().type('Password123');
       cy.get('.login-container > .block-customer-login > .block-content > #login-form > .fieldset > .actions-toolbar > div.primary > #send2').click();
     });
+    it('Login account Failed', () => {
+      cy.visit('https://magento.softwaretestingboard.com/');
+      cy.get('.panel > .header > .authorization-link > a').click();
+      cy.get('#email').click().type(' ');
+      cy.get('.login-container > .block-customer-login > .block-content > #login-form > .fieldset > .password > .control > #pass').click().type(' ');
+      cy.get('.login-container > .block-customer-login > .block-content > #login-form > .fieldset > .actions-toolbar > div.primary > #send2').click();
+    });
 });
