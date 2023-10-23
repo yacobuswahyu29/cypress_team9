@@ -1,6 +1,8 @@
 describe('E2E create account', () => {
+  beforeEach(() =>{
+    cy.visit('');
+  })
     it('create account', () => {
-      cy.visit('https://magento.softwaretestingboard.com/');
       cy.get('.panel > .header > :nth-child(3) > a').click();
       cy.get('#firstname').click().type('test');
       cy.get('#lastname').click().type('cyp');
@@ -10,7 +12,6 @@ describe('E2E create account', () => {
       cy.get('#form-validate > .actions-toolbar > div.primary > .action').click();
     });
     it('create account failed', () => {
-      cy.visit('https://magento.softwaretestingboard.com/');
       cy.get('.panel > .header > :nth-child(3) > a').click();
       cy.get('#firstname').click().type('test');
       cy.get('#lastname').click().type('cyp');
